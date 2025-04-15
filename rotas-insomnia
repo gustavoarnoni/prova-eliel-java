@@ -1,0 +1,282 @@
+type: collection.insomnia.rest/5.0
+name: Prova Eliel
+meta:
+  id: wrk_16f05d323c664f259f2c109089a53718
+  created: 1744758930729
+  modified: 1744758930729
+collection:
+  - url: localhost:8080/api/pessoas
+    name: Lista todas as pessoas
+    meta:
+      id: req_a9a8213048fe429f8c72dd7614f86c86
+      created: 1744758965061
+      modified: 1744759147307
+      isPrivate: false
+      sortKey: -1744758965061
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8080/api/pessoas/(id)
+    name: Busca pessoa por ID
+    meta:
+      id: req_817caf4d817c4e3eabb1f54a7dd99272
+      created: 1744758991866
+      modified: 1744759257994
+      isPrivate: false
+      sortKey: -1744758991866
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8080/api/pessoas
+    name: Cria uma nova pessoa
+    meta:
+      id: req_1cfcc817faab47d981d5e239bf3fe693
+      created: 1744759007204
+      modified: 1744759132780
+      isPrivate: false
+      sortKey: -1744759007205
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "nome": "Gustavo Arnoni",
+          "idade": 20,
+          "endereco": "Rua DEF, 345"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8080/api/pessoas/(id)
+    name: Atualiza uma pessoa
+    meta:
+      id: req_cd59804551944c7584b71e6213317bd3
+      created: 1744759160788
+      modified: 1744759500059
+      isPrivate: false
+      sortKey: -1744759160788
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "nome": "",
+          "idade": 1000,
+          "endereco": "abublebuble"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8080/api/pessoas/(id)
+    name: Deleta uma pessoa
+    meta:
+      id: req_492c6fe385b74450a91da9e950693a2b
+      created: 1744759194697
+      modified: 1744759246790
+      isPrivate: false
+      sortKey: -1744759194697
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8080/api/pessoas/(id)/trabalhos
+    name: Lista trabalhos de uma pessoa
+    meta:
+      id: req_5c06cdd01a6f4c7e8fa3aa6806736095
+      created: 1744759210137
+      modified: 1744759422793
+      isPrivate: false
+      sortKey: -1744759210137
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8080/api/trabalhos
+    name: Lista todos os trabalhos
+    meta:
+      id: req_d43a3ad156f9443f8e3e2c1b498854cf
+      created: 1744759278687
+      modified: 1744759320319
+      isPrivate: false
+      sortKey: -1744759278687
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8080/api/trabalhos/(id)
+    name: Busca um trabalho por ID
+    meta:
+      id: req_10039301e59d4bb5b84ecf59d15a1362
+      created: 1744759290440
+      modified: 1744759404574
+      isPrivate: false
+      sortKey: -1744759290440
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8080/api/trabalhos
+    name: Cria um novo trabalho
+    meta:
+      id: req_08f01b45b80946489bfa4e4e9e0f28d3
+      created: 1744759344932
+      modified: 1744759386544
+      isPrivate: false
+      sortKey: -1744759344932
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "cargo": "Desenvolvedor",
+          "empresa": "Eliel Tech",
+          "salario": 5000.0,
+          "pessoaId": 2
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8080/api/trabalhos/(id)
+    name: Atualiza um trabalho
+    meta:
+      id: req_5d29b452b4304fee8c0c7d0a31075455
+      created: 1744759427866
+      modified: 1744759506657
+      isPrivate: false
+      sortKey: -1744759427866
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "cargo": "",
+          "empresa": "",
+          "salario": 0.0,
+          "pessoaId": 999
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8080/api/trabalhos/(id)
+    name: Deleta uma pessoa
+    meta:
+      id: req_a3436422990b45a8930bb47331bc2c18
+      created: 1744759510933
+      modified: 1744759528978
+      isPrivate: false
+      sortKey: -1744759510933
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_71ede3b9b4f8680615430da8c40c1dc9dea18917
+    created: 1744758930734
+    modified: 1744758930734
+environments:
+  name: Base Environment
+  meta:
+    id: env_71ede3b9b4f8680615430da8c40c1dc9dea18917
+    created: 1744758930732
+    modified: 1744758930732
+    isPrivate: false
